@@ -45,8 +45,8 @@ wss.on("connection", function connection(ws) {
         console.log("A client has disconnected");
     });
 
-    ws.on("error", function error() {
-        //
+    ws.on("error", function error(err) {
+        console.log("WebSocket Error:", err);
     });
 });
 
